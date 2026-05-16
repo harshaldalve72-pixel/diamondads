@@ -19,13 +19,13 @@
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
 
-  fbq('init', '1336240068411208');
+  fbq('init', '2229974927805526');
   fbq('track', 'PageView');
   </script>
 
   <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1336240068411208&ev=PageView&noscript=1"/>
+    src="https://www.facebook.com/tr?id=2229974927805526&ev=PageView&noscript=1"/>
   </noscript>
   <!-- End Meta Pixel Code -->
 
@@ -43,7 +43,6 @@
       color:white;
     }
 
-    /* Background Design */
     body::before,
     body::after{
       content:"";
@@ -74,7 +73,6 @@
       min-height:100vh;
     }
 
-    /* Profile Image */
     .profile-box{
       width:260px;
       height:260px;
@@ -93,7 +91,6 @@
       object-fit:cover;
     }
 
-    /* Title */
     .title{
       font-size:2rem;
       font-weight:800;
@@ -103,7 +100,6 @@
       text-shadow:0 0 10px rgba(255,230,0,0.5);
     }
 
-    /* Telegram Buttons */
     .telegram-btn{
       display:flex;
       align-items:center;
@@ -143,7 +139,6 @@
       flex-shrink:0;
     }
 
-    /* Managed By Link */
     .managed-link{
       display:block;
       margin-top:35px;
@@ -159,7 +154,6 @@
       transform:scale(1.05);
     }
 
-    /* Mobile Responsive */
     @media(max-width:480px){
 
       .profile-box{
@@ -187,17 +181,14 @@
 
   <div class="container">
 
-    <!-- Profile Image -->
     <div class="profile-box">
       <img src="img.jpg" alt="Hacker">
     </div>
 
-    <!-- Title -->
     <h1 class="title">
       ✨𝐂𝐨𝐥𝐨𝐮𝐫 𝐊𝐢𝐧𝐠 𝐏𝐫𝐞𝐝𝐢𝐜𝐭𝐢𝐨𝐧💸
     </h1>
 
-    <!-- Telegram Button 1 -->
     <a href="https://t.me/+4QW280-mpsAzZjJl"
        class="telegram-btn"
        onclick="trackTelegramClick()">
@@ -207,7 +198,6 @@
       <div class="icon">✓</div>
     </a>
 
-    <!-- Telegram Button 2 -->
     <a href="https://t.me/+4QW280-mpsAzZjJl"
        class="telegram-btn"
        onclick="trackTelegramClick()">
@@ -217,8 +207,7 @@
       <div class="icon">✓</div>
     </a>
 
-    <!-- Managed By -->
-    <a>
+    <a class="managed-link">
       Ads manage by @diamond_adsagency
     </a>
 
@@ -228,7 +217,7 @@
   <script>
     function trackTelegramClick() {
 
-      fbq('track', 'Lead');
+      fbq('track', 'Subscribe');
 
       fbq('trackCustom', 'TelegramButtonClick', {
         button_name: 'Join Telegram Channel'
