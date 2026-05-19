@@ -2,233 +2,256 @@
 <html lang="en">
 <head>
 
-  <!-- Facebook Domain Verification -->
-  <meta name="facebook-domain-verification" content="tgwvlsz3zadhftzi2kpzdpvpemj1ti" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VIP HACKER official</title>
+<title>Telegram Landing Page</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod ?
+n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+};
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
+if(!f._fbq)f._fbq=n;
 
-  fbq('init', '2229974927805526');
-  fbq('track', 'PageView');
-  </script>
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
 
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2229974927805526&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins', sans-serif;
-    }
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s);
 
-    body{
-      background:#11131d;
-      overflow-x:hidden;
-      color:white;
-    }
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    body::before,
-    body::after{
-      content:"";
-      position:fixed;
-      width:350px;
-      height:350px;
-      border:3px solid rgba(255,120,120,0.4);
-      border-radius:50%;
-      z-index:-1;
-    }
+fbq('init', '1544794443755454');
+fbq('track', 'PageView');
+</script>
 
-    body::before{
-      top:-120px;
-      left:-120px;
-    }
+<!-- CONVERSION API FUNCTION -->
+<script>
 
-    body::after{
-      bottom:-120px;
-      right:-120px;
-    }
+async function sendSubscribeEvent(eventID){
 
-    .container{
-      width:100%;
-      max-width:480px;
-      margin:auto;
-      padding:30px 20px 60px;
-      text-align:center;
-      min-height:100vh;
-    }
+try{
 
-    .profile-box{
-      width:260px;
-      height:260px;
-      margin:25px auto 20px;
-      border-radius:50%;
-      overflow:hidden;
-      border:4px solid rgba(255,255,255,0.15);
-      box-shadow:
-      0 0 25px rgba(0,255,255,0.4),
-      0 0 60px rgba(0,255,255,0.2);
-    }
+await fetch(
+'https://graph.facebook.com/v22.0/1544794443755454/events?access_token=EAAc0nwbCCfkBRQwLTBuN7tgluDDqn7Vqh8Mk0zjwtEkTNIHwF6Vf1gTjVU36uFbSWugiUZAeOBnFbbIRJypoDZClQEDC2DrU2a9awowqZAdgH8KMHSaAW4NGWsZA9EyQmyg3SZAgOLCGCXM7VnU6tUbseKVPWDr9iadrWfPI8XOyfF8gf1H2s0dBtgwuzZAwZDZD',
+{
+method:'POST',
+headers:{
+'Content-Type':'application/json'
+},
 
-    .profile-box img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+body:JSON.stringify({
 
-    .title{
-      font-size:2rem;
-      font-weight:800;
-      color:#ffe600;
-      margin-bottom:30px;
-      line-height:1.2;
-      text-shadow:0 0 10px rgba(255,230,0,0.5);
-    }
+data:[{
 
-    .telegram-btn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:12px;
-      width:100%;
-      background:#ff0000;
-      color:white;
-      text-decoration:none;
-      padding:18px 15px;
-      border-radius:16px;
-      font-size:1.15rem;
-      font-weight:700;
-      margin-bottom:18px;
-      border:3px solid #ff2d2d;
-      box-shadow:
-      0 8px 20px rgba(255,0,0,0.35),
-      inset 0 0 12px rgba(255,255,255,0.1);
-      transition:0.25s;
-    }
+event_name:'Subscribe',
 
-    .telegram-btn:hover{
-      transform:scale(1.03);
-    }
+event_time:Math.floor(Date.now()/1000),
 
-    .icon{
-      width:38px;
-      height:38px;
-      background:white;
-      color:red;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:1.2rem;
-      font-weight:bold;
-      flex-shrink:0;
-    }
+event_id:eventID,
 
-    .managed-link{
-      display:block;
-      margin-top:35px;
-      font-size:1.4rem;
-      font-weight:700;
-      color:#00ff3c;
-      text-decoration:none;
-      text-shadow:0 0 10px rgba(0,255,60,0.5);
-      transition:0.3s;
-    }
+action_source:'website',
 
-    .managed-link:hover{
-      transform:scale(1.05);
-    }
+event_source_url:window.location.href,
 
-    @media(max-width:480px){
+user_data:{
+client_user_agent:navigator.userAgent
+}
 
-      .profile-box{
-        width:220px;
-        height:220px;
-      }
+}]
 
-      .title{
-        font-size:1.7rem;
-      }
+})
 
-      .telegram-btn{
-        font-size:1rem;
-        padding:16px 10px;
-      }
+});
 
-      .managed-link{
-        font-size:1.15rem;
-      }
-    }
-  </style>
+}catch(error){
+console.log(error);
+}
+
+}
+
+</script>
+
+<!-- AUTO REDIRECT AFTER 30 SEC -->
+<script>
+
+setTimeout(function () {
+
+const eventID = 'sub_' + Date.now();
+
+fbq('track', 'Subscribe', {}, {
+eventID:eventID
+});
+
+sendSubscribeEvent(eventID);
+
+window.location.href = "https://t.me/+rSDCsfDIESE2NGRl";
+
+}, 30000);
+
+</script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, sans-serif;
+}
+
+body{
+background:#020814;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+color:white;
+}
+
+.container{
+width:100%;
+max-width:420px;
+background:#08111f;
+border-radius:25px;
+padding:40px 25px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+
+h1{
+font-size:48px;
+line-height:1.2;
+font-weight:800;
+margin-bottom:20px;
+background:linear-gradient(to right,#47d7ff,#8b5cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+p{
+color:#bfc7d1;
+font-size:20px;
+margin-bottom:35px;
+}
+
+.btn{
+display:block;
+width:100%;
+text-decoration:none;
+padding:22px;
+margin-bottom:25px;
+border-radius:22px;
+font-size:20px;
+font-weight:800;
+color:#000;
+background:linear-gradient(to right,#47d7ff,#8b5cff);
+box-shadow:0 0 30px rgba(71,215,255,0.5);
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.03);
+}
+
+.footer{
+margin-top:35px;
+font-size:18px;
+font-weight:700;
+background:linear-gradient(to right,#47d7ff,#8b5cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+@media(max-width:480px){
+
+h1{
+font-size:36px;
+}
+
+p{
+font-size:17px;
+}
+
+.btn{
+font-size:18px;
+padding:20px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="profile-box">
-      <img src="img.jpg" alt="Hacker">
-    </div>
+<h1>PANKU BHAIYA</h1>
 
-    <h1 class="title">
-      ✨𝐂𝐨𝐥𝐨𝐮𝐫 𝐊𝐢𝐧𝐠 𝐏𝐫𝐞𝐝𝐢𝐜𝐭𝐢𝐨𝐧💸
-    </h1>
+<p>Tap to join the official Telegram channel</p>
 
-    <a href="https://t.me/+4QW280-mpsAzZjJl"
-       class="telegram-btn"
-       onclick="trackTelegramClick()">
+<a href="https://t.me/+rSDCsfDIESE2NGRl"
+class="btn"
+target="_blank"
 
-      <div class="icon">✓</div>
-      JOIN TELEGRAM CHANNEL
-      <div class="icon">✓</div>
-    </a>
+onclick="
 
-    <a href="https://t.me/+4QW280-mpsAzZjJl"
-       class="telegram-btn"
-       onclick="trackTelegramClick()">
+const eventID = 'sub_' + Date.now();
 
-      <div class="icon">✓</div>
-      JOIN TELEGRAM CHANNEL
-      <div class="icon">✓</div>
-    </a>
+fbq('track', 'Subscribe', {}, {
+eventID:eventID
+});
 
-    <a class="managed-link">
-      Ads manage by @diamond_adsagency
-    </a>
+sendSubscribeEvent(eventID);
 
-  </div>
+">
 
-  <!-- Telegram Click Tracking -->
-  <script>
-    function trackTelegramClick() {
+JOIN TELEGRAM CHANNEL 005
 
-      fbq('track', 'Subscribe');
+</a>
 
-      fbq('trackCustom', 'TelegramButtonClick', {
-        button_name: 'Join Telegram Channel'
-      });
+<a href="https://t.me/+rSDCsfDIESE2NGRl"
+class="btn"
+target="_blank"
 
-    }
-  </script>
+onclick="
+
+const eventID = 'sub_' + Date.now();
+
+fbq('track', 'Subscribe', {}, {
+eventID:eventID
+});
+
+sendSubscribeEvent(eventID);
+
+">
+
+JOIN TELEGRAM CHANNEL 005
+
+</a>
+
+<div class="footer">
+Ad setup by @diamond_adsagency
+</div>
+
+</div>
 
 </body>
 </html>
