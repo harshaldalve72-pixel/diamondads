@@ -9,9 +9,11 @@
 
 <!-- META PIXEL -->
 <script>
+
 !function(f,b,e,v,n,t,s)
 {
 if(f.fbq)return;
+
 n=f.fbq=function(){
 n.callMethod ?
 n.callMethod.apply(n,arguments) : n.queue.push(arguments)
@@ -35,72 +37,10 @@ s.parentNode.insertBefore(t,s);
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1544794443755454');
+
 fbq('track', 'PageView');
-</script>
 
-<!-- CONVERSION API FUNCTION -->
-<script>
-
-async function sendSubscribeEvent(eventID){
-
-try{
-
-await fetch(
-'https://graph.facebook.com/v22.0/1544794443755454/events?access_token=EAAc0nwbCCfkBRQwLTBuN7tgluDDqn7Vqh8Mk0zjwtEkTNIHwF6Vf1gTjVU36uFbSWugiUZAeOBnFbbIRJypoDZClQEDC2DrU2a9awowqZAdgH8KMHSaAW4NGWsZA9EyQmyg3SZAgOLCGCXM7VnU6tUbseKVPWDr9iadrWfPI8XOyfF8gf1H2s0dBtgwuzZAwZDZD',
-{
-method:'POST',
-headers:{
-'Content-Type':'application/json'
-},
-
-body:JSON.stringify({
-
-data:[{
-
-event_name:'Subscribe',
-
-event_time:Math.floor(Date.now()/1000),
-
-event_id:eventID,
-
-action_source:'website',
-
-event_source_url:window.location.href,
-
-user_data:{
-client_user_agent:navigator.userAgent
-}
-
-}]
-
-})
-
-});
-
-}catch(error){
-console.log(error);
-}
-
-}
-
-</script>
-
-<!-- AUTO REDIRECT AFTER 30 SEC -->
-<script>
-
-// setTimeout(function () {
-
-// const eventID = 'sub_' + Date.now();
-
-// fbq('track', 'Subscribe', {}, {
-// eventID:eventID
-// });
-
-// sendSubscribeEvent(eventID);
-
-// window.location.href = "https://t.me/+rSDCsfDIESE2NGRl";
-
-// }, 30000);
+console.log("Meta Pixel Loaded");
 
 </script>
 
@@ -110,7 +50,7 @@ console.log(error);
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -210,18 +150,7 @@ padding:20px;
 <a href="https://t.me/+rSDCsfDIESE2NGRl"
 class="btn"
 target="_blank"
-
-onclick="
-
-const eventID = 'sub_' + Date.now();
-
-fbq('track', 'Subscribe', {}, {
-eventID:eventID
-});
-
-sendSubscribeEvent(eventID);
-
-">
+onclick="trackSubscribe()">
 
 JOIN TELEGRAM CHANNEL 005
 
@@ -230,18 +159,7 @@ JOIN TELEGRAM CHANNEL 005
 <a href="https://t.me/+rSDCsfDIESE2NGRl"
 class="btn"
 target="_blank"
-
-onclick="
-
-const eventID = 'sub_' + Date.now();
-
-fbq('track', 'Subscribe', {}, {
-eventID:eventID
-});
-
-sendSubscribeEvent(eventID);
-
-">
+onclick="trackSubscribe()">
 
 JOIN TELEGRAM CHANNEL 005
 
@@ -252,6 +170,31 @@ Ad setup by @diamond_adsagency
 </div>
 
 </div>
+
+<script>
+
+function trackSubscribe(){
+
+console.log("Subscribe Event Fired");
+
+fbq('track', 'Subscribe');
+
+}
+
+// AUTO REDIRECT AFTER 30 SEC
+
+setTimeout(function(){
+
+console.log("Auto Subscribe Fired");
+
+fbq('track', 'Subscribe');
+
+window.location.href =
+"https://t.me/+rSDCsfDIESE2NGRl";
+
+},30000);
+
+</script>
 
 </body>
 </html>
